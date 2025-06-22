@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "zDtQh4wPyoW1bWLrbU5jzEr7MpZqYecT8apcXeXw390=",
+  "Source": "wabApi",
+  "BasePath": "_content/wabApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
