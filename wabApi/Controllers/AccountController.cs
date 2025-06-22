@@ -1,21 +1,24 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography.Xml;
 using System.Text;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using wabApi.DTOs.AccountDtos;
+using wabApi.Migrations;
 using wabApi.Models;
+using wabApi.UnitOfWorks;
 namespace wabApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
     {
-        ItiDbContext context;
-        public AccountController(ItiDbContext context)
+        UnitOfWork unitOfWork;
+        public AccountController(UnitOfWork _unitOfWork)
         {
-            this.context = context;
+            this.unitOfWork = _unitOfWork;
         }
         [HttpPost("register")]
         public IActionResult Register(RegisterDto dto)
@@ -31,8 +34,7 @@ namespace wabApi.Controllers
                 Password=hashedPassword,
                 Age=dto.Age,
             };
-            context.Users.Add(u);
-            context.SaveChanges();
+           unitOfWork.AccountRpository.addUser(u);
             return Ok("successfully register");
         }
 
@@ -41,18 +43,17 @@ namespace wabApi.Controllers
         {
             if (!ModelState.IsValid)
                 return Unauthorized("invalid data");
-            User user=context.Users.FirstOrDefault(u=>u.Email==dto.Email);
-            if (user == null)
-                return Unauthorized("invalid userName Or password");
-            bool isValid = BCrypt.Net.BCrypt.Verify(dto.Password, user.Password);
-            if (!isValid)
+            User user=unitOfWork.AccountRpository.getUserByEmail(dto.Email);
+            if (user == null || !BCrypt.Net.BCrypt.Verify(dto.Password, user.Password))
                 return Unauthorized("invalid userName Or password");
 
             #region claims
-            var UserData = new List<Claim>();
-            UserData.Add(new Claim("userName", user.Email));
-            UserData.Add(new Claim("name", user.Name));
-            UserData.Add(new Claim("age", user.Age.ToString()));
+            List<Claim> UserData = new List<Claim>
+            {
+                new Claim("userName", user.Email),
+                new Claim("name", user.Name),
+                new Claim("age", user.Age.ToString())
+            };
             #endregion
 
             #region Credentials
@@ -63,13 +64,61 @@ namespace wabApi.Controllers
 
             JwtSecurityToken tokenObject = new JwtSecurityToken(
                 claims:UserData,
-                expires:DateTime.Now.AddDays(2),
+                expires:DateTime.Now.AddMinutes(1),
                 signingCredentials:signingCred
                 );
             //convert token from object to string
-            var token = new JwtSecurityTokenHandler().WriteToken(tokenObject);
+            var AccesstokenString = new JwtSecurityTokenHandler().WriteToken(tokenObject);
 
-            return Created("login successfully",token);
+            var refreshToken=Guid.NewGuid().ToString();
+            user.RefreshToken= refreshToken;
+            user.RefreshTokenExpiry= DateTime.Now.AddDays(15);
+            unitOfWork.AccountRpository.save();
+
+            return Created("login successfully", new
+            {
+                token=AccesstokenString,
+                refreshToken=refreshToken
+            });
+        }
+
+        [HttpPost("refreshToken")]
+        public IActionResult RefreshToken(RefreshTokenDto dto)
+        {
+            var user = unitOfWork.AccountRpository.getUserByRefreshToken(dto.RefreshToken);
+          
+            if (user == null)
+                return Unauthorized("Invalid or expired refresh token");
+            #region claims
+            List<Claim> UserData = new List<Claim>
+            {
+                new Claim("userName", user.Email),
+                new Claim("name", user.Name),
+                new Claim("age", user.Age.ToString())
+            };
+            #endregion
+
+            #region Credentials
+            string key = "this_is_a_very_long_secret_key_456789";
+            var scrtKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
+            var signingCred = new SigningCredentials(scrtKey, SecurityAlgorithms.HmacSha256);
+            #endregion
+
+            JwtSecurityToken tokenObject = new JwtSecurityToken(
+                claims: UserData,
+                expires: DateTime.Now.AddMinutes(1),
+                signingCredentials: signingCred
+                );
+            //convert token from object to string
+            var AccesstokenString = new JwtSecurityTokenHandler().WriteToken(tokenObject);
+            user.RefreshToken = Guid.NewGuid().ToString();
+            unitOfWork.AccountRpository.save();
+
+            return Ok( new
+            {
+                token = AccesstokenString,
+                refreshToken = user.RefreshToken
+            });
         }
     }
 }

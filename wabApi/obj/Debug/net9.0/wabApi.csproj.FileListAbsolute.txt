@@ -171,3 +171,4 @@ D:\ITI\Api\WebApiShaf3y\wabApi\wabApi\obj\Debug\net9.0\wabApi.genruntimeconfig.c
 D:\ITI\Api\WebApiShaf3y\wabApi\wabApi\obj\Debug\net9.0\ref\wabApi.dll
 D:\ITI\Api\WebApiShaf3y\wabApi\wabApi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\ITI\Api\WebApiShaf3y\wabApi\wabApi\bin\Debug\net9.0\BCrypt.Net-Next.dll
+D:\ITI\Api\WebApiShaf3y\wabApi\wabApi\obj\Debug\net9.0\wabApi.sourcelink.json

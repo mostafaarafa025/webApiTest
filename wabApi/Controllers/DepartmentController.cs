@@ -13,13 +13,12 @@ namespace wabApi.Controllers
     [ApiController]
     public class DepartmentController : ControllerBase
     {
-        //IGenericRepository<Department> deptRepo;
+        
         UnitOfWork unitOfWork;
         IMapper map;
         public DepartmentController(UnitOfWork _unitOfWork,IMapper _map) 
         {
             this.map = _map;
-           //this.deptRepo = _deptRepo;
            this.unitOfWork = _unitOfWork;
         }
         [HttpGet]

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using wabApi.Models;
 
@@ -11,9 +12,11 @@ using wabApi.Models;
 namespace wabApi.Migrations
 {
     [DbContext(typeof(ItiDbContext))]
-    partial class ItiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250622034537_refreshTokens")]
+    partial class refreshTokens
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -13,5 +13,9 @@ namespace wabApi.Models
         [NotMapped]
         public string ConfirmPassword { get; set; }
         public int Age {  get; set; }
+
+        public string? RefreshToken {  get; set; }
+        public DateTime? RefreshTokenExpiry { get; set; }
+
     }
 }

@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|solutionrelative:wabapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|d:\\iti\\api\\webapishaf3y\\wabapi\\wabapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|solutionrelative:wabapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|d:\\iti\\api\\webapishaf3y\\wabapi\\wabapi\\interfaces\\iaccountrpository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|solutionrelative:wabapi\\interfaces\\iaccountrpository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|d:\\iti\\api\\webapishaf3y\\wabapi\\wabapi\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|solutionrelative:wabapi\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|d:\\iti\\api\\webapishaf3y\\wabapi\\wabapi\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|solutionrelative:wabapi\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|d:\\iti\\api\\webapishaf3y\\wabapi\\wabapi\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|solutionrelative:wabapi\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|d:\\iti\\api\\webapishaf3y\\wabapi\\wabapi\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79E7B27D-3F94-40B0-BCA9-A11CF8DB7635}|wabApi\\wabApi.csproj|solutionrelative:wabapi\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,45 +30,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "wabApi\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "wabApi\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAuwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T01:12:23.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Program.cs",
-              "RelativeDocumentMoniker": "wabApi\\Program.cs",
-              "ToolTip": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Program.cs",
-              "RelativeToolTip": "wabApi\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T23:16:26.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "DepartmentController.cs",
               "DocumentMoniker": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Controllers\\DepartmentController.cs",
               "RelativeDocumentMoniker": "wabApi\\Controllers\\DepartmentController.cs",
               "ToolTip": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Controllers\\DepartmentController.cs",
               "RelativeToolTip": "wabApi\\Controllers\\DepartmentController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABkAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T22:59:53.076Z",
+              "WhenOpened": "2025-06-22T05:51:02.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Repositories\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "wabApi\\Repositories\\AccountRepository.cs",
+              "ToolTip": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Repositories\\AccountRepository.cs",
+              "RelativeToolTip": "wabApi\\Repositories\\AccountRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAWwCEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T05:46:24.327Z",
               "EditorCaption": ""
             },
             {
@@ -75,9 +66,35 @@
               "RelativeDocumentMoniker": "wabApi\\UnitOfWorks\\UnitOfWork.cs",
               "ToolTip": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\UnitOfWorks\\UnitOfWork.cs",
               "RelativeToolTip": "wabApi\\UnitOfWorks\\UnitOfWork.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T22:06:16.958Z",
+              "WhenOpened": "2025-06-22T05:49:05.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IAccountRpository.cs",
+              "DocumentMoniker": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Interfaces\\IAccountRpository.cs",
+              "RelativeDocumentMoniker": "wabApi\\Interfaces\\IAccountRpository.cs",
+              "ToolTip": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Interfaces\\IAccountRpository.cs",
+              "RelativeToolTip": "wabApi\\Interfaces\\IAccountRpository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T05:41:22.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "wabApi\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\ITI\\Api\\WebApiShaf3y\\wabApi\\wabApi\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "wabApi\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAkwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T01:12:23.702Z",
               "EditorCaption": ""
             }
           ]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wabApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bdf431da8ea77955134e300e6f46f31e368906a")]
 [assembly: System.Reflection.AssemblyProductAttribute("wabApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wabApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
